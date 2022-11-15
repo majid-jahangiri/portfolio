@@ -1,25 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react'
+
+import MainLayout from './components/layouts/MainLayout'
+import Sidebar from './components/Sidebar'
+import ContentContainer from './components/ui/ContentContainer'
+import TabPanel from './components/tabs/TabPanel'
+
+import { Typography } from '@mui/material'
 
 function App() {
+  const [value, setValue] = useState(0)
+  const handleChange = (event, newValue) => {
+    setValue(newValue)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <MainLayout>
+      <Sidebar value={value} handleChange={handleChange} />
+      <ContentContainer>
+        <TabPanel value={value} index={0}>
+          <Typography variant="subtitle" sx={{ textAlign: 'center' }}>
+            صفحه اصلی
+          </Typography>
+        </TabPanel>
+        <TabPanel value={value} index={1}>
+          <Typography variant="subtitle" sx={{ textAlign: 'center' }}>
+            درباره من
+          </Typography>
+        </TabPanel>
+        <TabPanel value={value} index={2}>
+          <Typography variant="subtitle" sx={{ textAlign: 'center' }}>
+            رزومه من
+          </Typography>
+        </TabPanel>
+        <TabPanel value={value} index={3}>
+          <Typography variant="subtitle" sx={{ textAlign: 'center' }}>
+            نمونه کارها
+          </Typography>
+        </TabPanel>
+        <TabPanel value={value} index={4}>
+          <Typography variant="subtitle" sx={{ textAlign: 'center' }}>
+            نظرات مشتریان
+          </Typography>
+        </TabPanel>
+        <TabPanel value={value} index={5}>
+          <Typography variant="subtitle" sx={{ textAlign: 'center' }}>
+            ارتباط با من
+          </Typography>
+        </TabPanel>
+      </ContentContainer>
+    </MainLayout>
+  )
 }
 
-export default App;
+export default App
