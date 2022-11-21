@@ -1,4 +1,14 @@
 /*!
+ * 
+ *   typed.js - A JavaScript Typing Animation Library
+ *   Author: Matt Boldt <me@mattboldt.com>
+ *   Version: v2.0.12
+ *   Url: https://github.com/mattboldt/typed.js
+ *   License(s): MIT
+ * 
+ */
+
+/*!
  * CSSJanus. https://github.com/cssjanus/cssjanus
  *
  * Copyright 2014 Trevor Parscal
@@ -17,6 +27,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
+/*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */
 
 /**
  * @license React
