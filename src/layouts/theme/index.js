@@ -13,9 +13,6 @@ export const theme = createTheme({
     secondary: {
       main: '#F2E7D5',
     },
-    info: {
-      main: '#F7F7F7',
-    },
   },
   typography: {
     fontFamily: 'Vazir, Roboto',

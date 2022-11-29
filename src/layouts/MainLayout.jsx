@@ -5,12 +5,8 @@ import { Helmet, HelmetProvider } from 'react-helmet-async'
 import createCache from '@emotion/cache'
 import { prefixer } from 'stylis'
 import Grid from '@mui/material/Unstable_Grid2'
-import { Typography, Box, Divider, Avatar } from '@mui/material'
-import { gray } from '@mui/material/colors'
 
-import { theme } from '../ui/theme'
-import Sidebar from '../Sidebar'
-import ContentContainer from '../ui/ContentContainer'
+import { theme } from './theme'
 
 const MainLayout = ({ children }) => {
   const cacheRTL = createCache({
