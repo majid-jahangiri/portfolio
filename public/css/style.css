@@ -17,3 +17,14 @@
   font-style: normal;
   font-display: swap;
 }
+
+body {
+  padding: 0;
+  margin: 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* .MuiCard-root::-webkit-scrollbar {
+  display: none;
+} */

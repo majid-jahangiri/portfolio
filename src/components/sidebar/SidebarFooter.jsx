@@ -5,12 +5,11 @@ const SidebarFooter = () => {
   return (
     <Box
       sx={{
-        flexGeow: 1,
+        flexGrow: 1,
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'end',
-        alignItems: 'center',
-        height: 100,
+        mb: 2,
       }}
     >
       <Typography variant="subtitle2" color="whitesmoke">

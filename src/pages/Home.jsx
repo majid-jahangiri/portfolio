@@ -21,7 +21,7 @@ const Home = () => {
       typeSpeed: 50,
       backSpeed: 20,
       backDelay: 10,
-      showCurser: false,
+      showCursor: false,
     })
 
     const typedInfo = new Typed(infoEl.current, {
@@ -67,7 +67,6 @@ const Home = () => {
           backgroundColor: 'rgba(0,0,0,.3)',
           width: '100%',
           height: '100%',
-          borderRadius: 5,
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',

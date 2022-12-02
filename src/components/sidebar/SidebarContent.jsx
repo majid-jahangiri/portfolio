@@ -4,7 +4,7 @@ import { SidebarHeader, SidebarFooter, SidebarTabs } from '.'
 
 const SidebarContent = () => {
   return (
-    <Box sx={{ textAlign: 'center', justifiyContent: 'center', mt: 2 }}>
+    <Box sx={{ display: 'flex', textAlign: 'center', flexDirection: 'column', height: '100vh', mt: 2 }}>
       <SidebarHeader />
       <Divider variant="middle" sx={{ mt: 2 }} />
       <SidebarTabs />

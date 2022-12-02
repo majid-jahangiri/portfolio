@@ -12,10 +12,10 @@ const SidebarHeader = () => {
           height: 200,
           width: 200,
           margin: '0 auto',
-          display: {
-            xs: 'none',
-            md: 'block',
-          },
+          // display: {
+          //   xs: 'none',
+          //   md: 'block',
+          // },
         }}
       >
         MJ
