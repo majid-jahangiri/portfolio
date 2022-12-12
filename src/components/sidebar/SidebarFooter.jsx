@@ -9,12 +9,12 @@ const SidebarFooter = () => {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'end',
-        mb: 2,
+        mb: 1.5,
       }}
     >
-      <Typography variant="subtitle2" color="whitesmoke">
+      {/* <Typography variant="subtitle2" color="whitesmoke">
         طراحی شده با <FavoriteRounded sx={{ verticalAlign: 'middle', color: 'tomato', height: 20 }} />
-      </Typography>
+      </Typography> */}
       <Typography variant="caption" color="whitesmoke" sx={{ mt: 1 }}>
         کپی رایت 1401
         <CopyrightRounded sx={{ verticalAlign: 'middle', height: 16 }} />

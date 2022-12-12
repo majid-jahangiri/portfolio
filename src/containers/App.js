@@ -1,5 +1,6 @@
-import { useState } from 'react'
-import { Typography } from '@mui/material'
+import { useEffect, useState } from 'react'
+import { Typography, useMediaQuery } from '@mui/material'
+import { useTheme } from '@mui/material/styles'
 
 import MainLayout from '../layouts/MainLayout'
 import { Sidebar } from '../components/sidebar'
@@ -9,11 +10,20 @@ import Page from '../pages/components/Page'
 import SidebarContainer from './SidebarContainer'
 import { mainContext } from '../context'
 import SwipeableViews from 'react-swipeable-views'
-import { Home, About } from '../pages'
+import { Home, About, Resume } from '../pages'
 
 function App() {
   const [pageNumber, setPageNumber] = useState(0)
   const [drawerOpen, setDrawerOpen] = useState(false)
+
+  const theme = useTheme()
+  const isMdUp = useMediaQuery(theme.breakpoints.up('md'))
+
+  useEffect(() => {
+    if (isMdUp) {
+      setDrawerOpen(false)
+    }
+  }, [isMdUp])
 
   const handlePageNumber = (event, newValue) => {
     setPageNumber(newValue)
@@ -28,15 +38,13 @@ function App() {
         <PagesContainer>
           <SwipeableViews index={pageNumber} onChangeIndex={handlePageNumber}>
             <Page pageNumber={pageNumber} index={0}>
-              <Home />
+              <Home title={'وب سایت شخصی | صفحه اصلی'} />
             </Page>
             <Page pageNumber={pageNumber} index={1}>
-              <About />
+              <About title={'وب سایت شخصی | درباره من'} />
             </Page>
             <Page pageNumber={pageNumber} index={2}>
-              <Typography variant="subtitle" sx={{ textAlign: 'center' }}>
-                رزومه من
-              </Typography>
+              <Resume title={'وب سایت شخصس | رزومه من'} />
             </Page>
             <Page pageNumber={pageNumber} index={3}>
               <Typography variant="subtitle" sx={{ textAlign: 'center' }}>

@@ -8,9 +8,10 @@ import DevInfo from './components/DevInfo'
 import avatar from '../assets/avatar.jpg'
 import Skill from './components/Skill'
 import { devSkills } from '../constants/skills'
+import { Helmet } from 'react-helmet-async'
 
-const About = () => {
-  const { htmlSkill, cssSkill, reactSkill, nodeSkill, gitSkill, jsSkill } = devSkills
+const About = ({ title }) => {
+  const { htmlSkill, cssSkill, reactSkill, nodeSkill, gitSkill, jsSkill, materialUiSkill } = devSkills
 
   const [javascript, setJavascript] = useState(0)
   const [html, setHtml] = useState(0)
@@ -18,32 +19,73 @@ const About = () => {
   const [nodeJs, setNodeJs] = useState(0)
   const [reactJs, setReactJs] = useState(0)
   const [git, setGit] = useState(0)
+  const [material, setMaterial] = useState(0)
+
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     setJavascript((prev) => {
+  //       const diff = Math.random() * 10
+  //       return Math.min(prev + diff, 57)
+  //     })
+  //     setHtml((prev) => {
+  //       const diff = Math.random() * 10
+  //       return Math.min(prev + diff, 66)
+  //     })
+  //     setCss((prev) => {
+  //       const diff = Math.random() * 10
+  //       return Math.min(prev + diff, 65)
+  //     })
+  //     setNodeJs((prev) => {
+  //       const diff = Math.random() * 10
+  //       return Math.min(prev + diff, 14)
+  //     })
+  //     setReactJs((prev) => {
+  //       const diff = Math.random() * 10
+  //       return Math.min(prev + diff, 55)
+  //     })
+  //     setGit((prev) => {
+  //       const diff = Math.random() * 10
+  //       return Math.min(prev + diff, 16)
+  //     })
+  //     setMaterial((prev) => {
+  //       const diff = Math.random() * 10
+  //       return Math.min(prev + diff, 24)
+  //     })
+  //   }, 150)
+  //   return () => {
+  //     clearInterval(timer)
+  //   }
+  // }, [])
 
   useEffect(() => {
     const timer = setInterval(() => {
       setJavascript((prev) => {
-        const diff = Math.random() * 10
+        const diff = 5
         return Math.min(prev + diff, 57)
       })
       setHtml((prev) => {
-        const diff = Math.random() * 10
+        const diff = 5
         return Math.min(prev + diff, 66)
       })
       setCss((prev) => {
-        const diff = Math.random() * 10
+        const diff = 5
         return Math.min(prev + diff, 65)
       })
       setNodeJs((prev) => {
-        const diff = Math.random() * 10
+        const diff = 5
         return Math.min(prev + diff, 14)
       })
       setReactJs((prev) => {
-        const diff = Math.random() * 10
+        const diff = 5
         return Math.min(prev + diff, 55)
       })
       setGit((prev) => {
-        const diff = Math.random() * 10
+        const diff = 5
         return Math.min(prev + diff, 16)
+      })
+      setMaterial((prev) => {
+        const diff = 5
+        return Math.min(prev + diff, 24)
       })
     }, 150)
     return () => {
@@ -53,6 +95,9 @@ const About = () => {
 
   return (
     <Card sx={{ height: '100vh', backgroundColor: 'whitesmoke', overflowY: 'scroll' }}>
+      <Helmet>
+        <title>{title}</title>
+      </Helmet>
       <CardContent>
         <Grid container sx={{ mx: 3 }}>
           <Grid xs={12} md={8}>
@@ -62,6 +107,7 @@ const About = () => {
                 '&::before, &::after': {
                   borderColor: 'success.main',
                 },
+                mb: 4,
               }}
             >
               <Chip
@@ -116,12 +162,22 @@ const About = () => {
                 sx={{ p: 2.5 }}
               />
             </Divider>
+            {/* <Skill name={htmlSkill.name} icon={htmlSkill.icon} color={htmlSkill.color} value={html} />
+            <Skill name={cssSkill.name} icon={cssSkill.icon} color={cssSkill.color} value={css} />
+            <Skill name={jsSkill.name} icon={jsSkill.icon} color={jsSkill.color} value={javascript} />
+            <Skill name={reactSkill.name} icon={reactSkill.icon} color={reactSkill.color} value={reactJs} />
+            <Skill name={nodeSkill.name} icon={nodeSkill.icon} color={nodeSkill.color} value={nodeJs} />
+            <Skill name={gitSkill.name} icon={gitSkill.icon} color={gitSkill.color} value={git} />
+            <Skill name={materialUiSkill.name} icon={materialUiSkill.icon} color={materialUiSkill.color} value={material} /> */}
+          </Grid>
+          <Grid container sx={{ width: 1 }}>
             <Skill name={htmlSkill.name} icon={htmlSkill.icon} color={htmlSkill.color} value={html} />
             <Skill name={cssSkill.name} icon={cssSkill.icon} color={cssSkill.color} value={css} />
             <Skill name={jsSkill.name} icon={jsSkill.icon} color={jsSkill.color} value={javascript} />
             <Skill name={reactSkill.name} icon={reactSkill.icon} color={reactSkill.color} value={reactJs} />
             <Skill name={nodeSkill.name} icon={nodeSkill.icon} color={nodeSkill.color} value={nodeJs} />
             <Skill name={gitSkill.name} icon={gitSkill.icon} color={gitSkill.color} value={git} />
+            <Skill name={materialUiSkill.name} icon={materialUiSkill.icon} color={materialUiSkill.color} value={material} />
           </Grid>
         </Grid>
       </CardContent>

@@ -2,14 +2,15 @@ import { Box, Typography } from '@mui/material'
 import Typed from 'typed.js'
 import Particles from 'react-particles'
 import { loadFull } from 'tsparticles'
+import { Helmet } from 'react-helmet-async'
 
-import { hexagon, links } from '../constants/particles'
+import { links } from '../constants/particles'
 
 import { useCallback, useEffect, useRef } from 'react'
 
 import bg3 from '../assets/bg3.jpg'
 
-const Home = () => {
+const Home = ({title}) => {
   const nameEl = useRef(null)
   const infoEl = useRef(null)
 
@@ -73,6 +74,9 @@ const Home = () => {
           alignItems: 'center',
         }}
       >
+        <Helmet>
+          <title>{title}</title>
+        </Helmet>
         <Particles id="tsparticles" init={particlesInit} loaded={particlesLoaded} options={links} />
         <Typography variant="h4" ref={nameEl} color="#6D9886"></Typography>
         <Typography variant="h5" ref={infoEl} color="white" sx={{ textDecoration: 'underline', textDecorationColor: '#F2E7D5' }}></Typography>

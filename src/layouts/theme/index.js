@@ -15,6 +15,6 @@ export const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: 'Vazir, Roboto',
+    fontFamily: 'tanha, Vazir, Roboto',
   },
 })

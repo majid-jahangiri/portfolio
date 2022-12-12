@@ -2,6 +2,8 @@ import { Typography, Avatar } from '@mui/material'
 
 import avatar from '../../assets/avatar.jpg'
 
+import { SidebarSocial } from './'
+
 const SidebarHeader = () => {
   return (
     <>
@@ -26,6 +28,7 @@ const SidebarHeader = () => {
       <Typography variant="caption" color="whitesmoke">
         برنامه نویس و توسعه دهنده
       </Typography>
+      <SidebarSocial />
     </>
   )
 }

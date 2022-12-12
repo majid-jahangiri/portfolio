@@ -1,11 +1,11 @@
 import { Tabs, Tab } from '@mui/material'
 
 import { useGlobalContext } from '../../context'
-import {tabsData} from '../data/tabsData.sidebar'
+import { tabsData } from '../data/tabsData.sidebar'
 
 const SidebarTabs = () => {
   const { pageNumber, handlePageNumber, setDrawerOpen } = useGlobalContext()
-  
+
   const data = tabsData()
 
   const drawerHandle = () => {
