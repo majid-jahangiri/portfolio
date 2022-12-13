@@ -10,7 +10,7 @@ import Page from '../pages/components/Page'
 import SidebarContainer from './SidebarContainer'
 import { mainContext } from '../context'
 import SwipeableViews from 'react-swipeable-views'
-import { Home, About, Resume } from '../pages'
+import { Home, About, Resume, Sample, Comments } from '../pages'
 
 function App() {
   const [pageNumber, setPageNumber] = useState(0)
@@ -47,14 +47,10 @@ function App() {
               <Resume title={'وب سایت شخصس | رزومه من'} />
             </Page>
             <Page pageNumber={pageNumber} index={3}>
-              <Typography variant="subtitle" sx={{ textAlign: 'center' }}>
-                نمونه کارها
-              </Typography>
+              <Sample title={'وب سایت شخصی | نمونه کارها'} />
             </Page>
             <Page pageNumber={pageNumber} index={4}>
-              <Typography variant="subtitle" sx={{ textAlign: 'center' }}>
-                نظرات مشتریان
-              </Typography>
+              <Comments title={'وب سایت شخصی | نظرات مشتریان'} />
             </Page>
             <Page pageNumber={pageNumber} index={5}>
               <Typography variant="subtitle" sx={{ textAlign: 'center' }}>
