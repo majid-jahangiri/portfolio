@@ -35,6 +35,6 @@ body {
   scrollbar-width: none;
 }
 
-/* .MuiCard-root::-webkit-scrollbar {
+.MuiCard-root::-webkit-scrollbar {
   display: none;
-} */
+}

@@ -3,8 +3,11 @@ import { SidebarContent } from '../sidebar'
 
 import { useGlobalContext } from '../../context'
 
+import { useTheme } from '@mui/material/styles'
+
 const SidebarDrawer = () => {
   const { drawerOpen, setDrawerOpen } = useGlobalContext()
+  const theme = useTheme()
   return (
     <Drawer
       open={drawerOpen}
@@ -13,7 +16,7 @@ const SidebarDrawer = () => {
       sx={{
         '& .MuiDrawer-paper': {
           width: 300,
-          backgroundColor: 'primary.main',
+          backgroundColor: theme.palette.mode === 'dark' ? null : 'secondary.main',
         },
         display: {
           xs: 'block',

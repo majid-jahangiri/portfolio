@@ -1,31 +1,20 @@
-import { Typography, Avatar } from '@mui/material'
+import { Typography } from '@mui/material'
 
-import avatar from '../../assets/avatar.jpg'
+import ThemeActionButton from '../ThemeActionButton'
 
 import { SidebarSocial } from './'
+import {MyAvatar} from '../common'
+import avatar from '../../assets/avatar.jpg'
 
 const SidebarHeader = () => {
   return (
     <>
-      <Avatar
-        src={avatar}
-        variant="rounded"
-        sx={{
-          height: 200,
-          width: 200,
-          margin: '0 auto',
-          // display: {
-          //   xs: 'none',
-          //   md: 'block',
-          // },
-        }}
-      >
-        MJ
-      </Avatar>
-      <Typography variant="h6" color="whitesmoke" sx={{ mt: 2 }}>
+      <ThemeActionButton />
+      <MyAvatar avatar={avatar} size={200} fallback={'MJ'} />
+      <Typography variant="h6" color="text.primary" sx={{ mt: 2 }}>
         مجید جهانگیری
       </Typography>
-      <Typography variant="caption" color="whitesmoke">
+      <Typography variant="caption" color="text.primary">
         برنامه نویس و توسعه دهنده
       </Typography>
       <SidebarSocial />

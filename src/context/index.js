@@ -5,6 +5,7 @@ export const mainContext = createContext({
   handlePageNumber: () => {},
   drawerOpen: false,
   setDrawerOpen: () => {},
+  handleThemeChange: () => {},
 })
 
 export const useGlobalContext = () => {

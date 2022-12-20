@@ -1,5 +1,5 @@
 import { Typography, Box } from '@mui/material'
-import { FavoriteRounded, CopyrightRounded } from '@mui/icons-material'
+import { CopyrightRounded } from '@mui/icons-material'
 
 const SidebarFooter = () => {
   return (
@@ -15,7 +15,7 @@ const SidebarFooter = () => {
       {/* <Typography variant="subtitle2" color="whitesmoke">
         طراحی شده با <FavoriteRounded sx={{ verticalAlign: 'middle', color: 'tomato', height: 20 }} />
       </Typography> */}
-      <Typography variant="caption" color="whitesmoke" sx={{ mt: 1 }}>
+      <Typography variant="caption" color="text.primary" sx={{ mt: 1 }}>
         کپی رایت 1401
         <CopyrightRounded sx={{ verticalAlign: 'middle', height: 16 }} />
       </Typography>

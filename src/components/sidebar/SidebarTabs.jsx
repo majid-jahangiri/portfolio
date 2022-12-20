@@ -1,11 +1,14 @@
 import { Tabs, Tab } from '@mui/material'
 
+import { useTheme } from '@mui/material/styles'
+
 import { useGlobalContext } from '../../context'
-import { tabsData } from '../data/tabsData.sidebar'
+import { tabsData } from '../../constants/tabsData'
 
 const SidebarTabs = () => {
   const { pageNumber, handlePageNumber, setDrawerOpen } = useGlobalContext()
 
+  const theme = useTheme()
   const data = tabsData()
 
   const drawerHandle = () => {
@@ -20,8 +23,8 @@ const SidebarTabs = () => {
       allowScrollButtonsMobile
       value={pageNumber}
       onChange={handlePageNumber}
-      textColor="secondary"
-      indicatorColor="secondary"
+      textColor={theme.palette.mode === 'dark' ? 'secondary' : 'primary'}
+      indicatorColor={theme.palette.mode === 'dark' ? 'secondary' : 'primary'}
       sx={{
         '& .MuiTabs-flexContainer': {
           alignItems: 'start',

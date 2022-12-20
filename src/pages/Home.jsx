@@ -10,7 +10,7 @@ import { useCallback, useEffect, useRef } from 'react'
 
 import bg3 from '../assets/bg3.jpg'
 
-const Home = ({title}) => {
+const Home = ({ title }) => {
   const nameEl = useRef(null)
   const infoEl = useRef(null)
 
@@ -46,7 +46,7 @@ const Home = ({title}) => {
   }, [])
 
   const particlesLoaded = useCallback(async (container) => {
-    await console.log(container)
+    // await console.log(container)
   }, [])
 
   return (
